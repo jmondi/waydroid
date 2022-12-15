@@ -234,8 +234,8 @@ def make_base_props(args):
         props.append("debug.stagefright.ccodec=0")
     #props.append("ro.hardware.gralloc=" + gralloc)
 
-    # Use minigbm unconditionally!
-    props.append("ro.hardware.gralloc=minigbm")
+    # Use rockchip minigbm unconditionally!
+    props.append("ro.hardware.gralloc=minigbm_rockchip")
 
     if egl != "":
         props.append("ro.hardware.egl=" + egl)
