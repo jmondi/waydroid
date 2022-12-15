@@ -53,6 +53,8 @@ def generate_nodes_lxc_config(args):
     make_entry("/dev/pmsg0")
     make_entry("/dev/dxg")
     make_entry(tools.helpers.gpu.getDriNode(args), "dev/dri/renderD128")
+    for n in glob.glob("/dev/dri/card*"):
+        make_entry(n)
 
     for n in glob.glob("/dev/fb*"):
         make_entry(n)
